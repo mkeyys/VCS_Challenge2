@@ -45,7 +45,7 @@ int main() {
     getgrouplist(p_entry1->pw_name, p_entry1->pw_gid, groups, &ngroups);
     
     printf("\nGroups: ");
-    for (i = 0; i < ngroups; i++) {
+    for (int i = 0; i < ngroups; i++) {
         p_entry2 = getgrgid(groups[i]); 
         if (p_entry2 != NULL)
             printf("%s ", p_entry2->gr_name);
